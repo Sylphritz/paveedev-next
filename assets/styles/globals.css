@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #050505;
+  --ui-surface: color-mix(in oklab, var(--background) 90%, black);
+  --ui-sunken: color-mix(in oklab, var(--background) 80%, black);
+
+  /* Primary Colors */
+  --ui-primary: #C41028;
+  --ui-primary-light: color-mix(in oklab, var(--ui-primary) 80%, white);
+  --ui-primary-dark: color-mix(in oklab, var(--ui-primary) 90%, black);
+  --ui-primary-muted: color-mix(in oklab, var(--ui-primary-light) 50%, white);
+  --ui-on-primary: #FFFFFF;
+
+  /* Accent Colors */
+  --ui-accent: #EB5AD8;
+  --ui-accent-light: color-mix(in oklab, var(--ui-accent) 80%, white);
+  --ui-accent-dark: color-mix(in oklab, var(--ui-accent) 90%, black);
+  --ui-accent-muted: color-mix(in oklab, var(--ui-accent-light) 50%, white);
+  --ui-on-accent: #FFFFFF;
+
+  /* Content Colors (main text, etc.) */
+  --ui-content: var(--foreground);
+  --ui-content-muted: color-mix(in oklab, var(--ui-content) 70%, white);
+
+  /* Generic Status Colors */
+  --ui-success: #20974C;
+  --ui-warning: #F29E0D;
+  --ui-error: #FF0B0B;
+  --ui-info: #3D84F5;
+}
+
+/* Dark Mode Colors */
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --background: #050505;*/
+/*    --foreground: #EEEEEE;*/
+/*    --ui-surface: color-mix(in oklab, var(--background) 90%, white);*/
+/*    --ui-sunken: color-mix(in oklab, var(--background) 80%, white);*/
+/*  }*/
+/*}*/
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--ui-surface);
+  --color-sunken: var(--ui-sunken);
+
+  --color-primary: var(--ui-primary);
+  --color-primary-light: var(--ui-primary-light);
+  --color-primary-dark: var(--ui-primary-dark);
+  --color-primary-muted: var(--ui-primary-muted);
+  --color-on-primary: var(--ui-on-primary);
+
+  --color-accent: var(--ui-accent);
+  --color-accent-light: var(--ui-accent-light);
+  --color-accent-dark: var(--ui-accent-dark);
+  --color-accent-muted: var(--ui-accent-muted);
+  --color-on-accent: var(--ui-on-accent);
+
+  --color-content: var(--ui-content);
+  --color-content-muted: var(--ui-content-muted);
+
+  --font-sans: var(--font-dm-sans, Arial, Helvetica, sans-serif);
+  --font-mono: var(--font-jetbrains-mono, Courier New, Noto Sans Mono, monospace);
+}
+
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), sans-serif;
+
+    /* These aren't really required, but I like to be explicit. */
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 700;
+
+    &:hover {
+      color: var(--color-primary-light);
+    }
+
+    &:active {
+      color: var(--color-primary-dark);
+    }
+  }
+
+  code, pre {
+    font-family: var(--font-mono), monospace;
+  }
+}
