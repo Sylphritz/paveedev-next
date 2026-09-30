@@ -22,7 +22,7 @@
 
   /* Content Colors (main text, etc.) */
   --ui-content: var(--foreground);
-  --ui-content-muted: color-mix(in oklab, var(--ui-content) 70%, white);
+  --ui-content-muted: color-mix(in oklab, var(--ui-content) 50%, white);
 
   /* Generic Status Colors */
   --ui-success: #20974C;
