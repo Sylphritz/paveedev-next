@@ -1,21 +1,30 @@
+'use client'
+
+import { cn } from '@/utils/styles'
 import { Url } from 'next/dist/shared/lib/router/router'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { ReactNode } from 'react'
 
 type SidebarItemProps = {
   href: Url
-  icon?: string
+  leadingSlot?: ReactNode
   children: ReactNode
 }
 
-export function SidebarItem({ href, icon, children }: SidebarItemProps) {
+export function SidebarItem({ href, leadingSlot, children }: SidebarItemProps) {
+  const path = usePathname()
+
   return (
     <li>
       <Link
         href={href}
-        className="flex gap-3 justify-start items-center font-normal text-on-primary rounded-lg hover:bg-primary-light px-3 py-2 transition-colors duration-200"
+        className={cn(
+          'flex gap-3 justify-start items-center font-normal text-on-primary rounded-lg hover:bg-primary-light/50 px-3 py-2 transition-colors duration-200',
+          path === href && 'bg-primary-light/50',
+        )}
       >
-        {icon && <span className="material-symbols-rounded">{icon}</span>}
+        {leadingSlot}
         {children}
       </Link>
     </li>

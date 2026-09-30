@@ -99,4 +99,10 @@
   code, pre {
     font-family: var(--font-mono), monospace;
   }
+
+  svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+  }
 }

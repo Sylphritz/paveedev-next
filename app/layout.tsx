@@ -1,5 +1,4 @@
 import '@/assets/styles/globals.css'
-import 'material-symbols/rounded.css'
 import type { Metadata } from 'next'
 import { DM_Sans, JetBrains_Mono } from 'next/font/google'
 

@@ -9,6 +9,8 @@
 - [ ] Add lightbox for images
 - [ ] Dynamic copyright year
 - [ ] Add footer
+- [ ] Add relations
+    - Skills can show related projects and vice versa
 
 ## Reminders
 
