@@ -3,6 +3,7 @@ import { Breadcrumb } from '@/components/Breadcrumb'
 import { BreadcrumbItemProps } from '@/components/Breadcrumb/components/BreadcrumbItem'
 import MenuIcon from '@material-symbols/svg-400/rounded/menu.svg'
 
+// TODO: update it to be dynamic
 const breadcrumbItems: BreadcrumbItemProps[] = [
   { href: '/dashboard/skills', children: 'Skills' },
   { href: '/dashboard/skills/1234', children: 'Skill 1234' },
