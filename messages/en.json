@@ -1,0 +1,22 @@
+{
+  "Dashboard": {
+    "title": "Dashboard",
+    "menu": {
+      "title": "Admin Dashboard",
+      "item": {
+        "dashboard": "Dashboard",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contactInfo": "Contact Info",
+        "settings": "Settings"
+      },
+      "blog": {
+        "title": "Blog",
+        "item": {
+          "posts": "Posts",
+          "categories": "Categories"
+        }
+      }
+    }
+  }
+}

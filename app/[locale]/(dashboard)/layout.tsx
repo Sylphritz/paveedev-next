@@ -1,7 +1,8 @@
-import { Sidebar } from '@/app/(dashboard)/_components/Sidebar'
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { BreadcrumbItemProps } from '@/components/Breadcrumb/components/BreadcrumbItem'
 import MenuIcon from '@material-symbols/svg-400/rounded/menu.svg'
+
+import { Sidebar } from './_components/Sidebar'
 
 // TODO: update it to be dynamic
 const breadcrumbItems: BreadcrumbItemProps[] = [
@@ -9,7 +10,7 @@ const breadcrumbItems: BreadcrumbItemProps[] = [
   { href: '/dashboard/skills/1234', children: 'Skill 1234' },
 ]
 
-type DashboardLayoutProps = LayoutProps<'/'>
+type DashboardLayoutProps = LayoutProps<'/[locale]'>
 
 export default function FrontendLayout({ children }: DashboardLayoutProps) {
   return (

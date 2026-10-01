@@ -1,5 +1,5 @@
+import { Link } from '@/i18n/navigation'
 import { Url } from 'next/dist/shared/lib/router/router'
-import Link from 'next/link'
 import { ReactNode } from 'react'
 
 export type BreadcrumbItemProps = {

@@ -1,0 +1,22 @@
+{
+  "Dashboard": {
+    "title": "แดชบอร์ด",
+    "menu": {
+      "title": "แผงควบคุม",
+      "item": {
+        "dashboard": "แดชบอร์ด",
+        "skills": "ทักษะ",
+        "projects": "โปรเจค",
+        "contactInfo": "ข้อมูลการติดต่อ",
+        "settings": "การตั้งค่า"
+      },
+      "blog": {
+        "title": "บล็อก",
+        "item": {
+          "posts": "โพสต์",
+          "categories": "หมวดหมู่"
+        }
+      }
+    }
+  }
+}

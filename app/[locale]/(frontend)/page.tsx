@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from '@/i18n/navigation'
 
 
 
@@ -17,8 +17,8 @@ export default function Home() {
         erat. Pellentesque <strong className="font-bold">habitant</strong> morbi
         tristique senectus et netus et malesuada fames ac turpis egestas. Fusce
         commodo enim eu nisl luctus aliquam. Morbi hendrerit facilisis metus
-        rhoncus suscipit. In <Link href="/">tincidunt enim</Link> erat, non
-        congue erat sodales ac. Ut tincidunt, justo sit amet scelerisque
+        rhoncus suscipit. In <Link href="/public">tincidunt enim</Link> erat,
+        non congue erat sodales ac. Ut tincidunt, justo sit amet scelerisque
         euismod, leo augue fermentum ipsum, a lobortis libero ipsum ac est.
       </p>
       <p>
