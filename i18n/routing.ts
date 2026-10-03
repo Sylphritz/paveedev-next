@@ -18,3 +18,5 @@ export const routing = defineRouting({
     maxAge: 60 * 60 * 24 * 365,
   },
 })
+
+export type Locale = (typeof routing.locales)[number]
