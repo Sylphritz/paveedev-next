@@ -24,3 +24,5 @@
 ## Reminders
 
 - Rounded tables with filled headers
+- Use this design as a reference for the user-facing page:
+    - https://dribbble.com/shots/25775994-Spacetihq-Dashboard-Office-Workspace-Optimization?utm_source=Clipboard_Shot&utm_campaign=jack-ux-ui-design&utm_content=Spacetihq%20Dashboard%20-%20Office%20Workspace%20Optimization&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=jack-ux-ui-design&utm_content=Spacetihq%20Dashboard%20-%20Office%20Workspace%20Optimization&utm_medium=Social_Share
