@@ -1,10 +1,27 @@
 import { Header } from '@/app/[locale]/(dashboard)/_components/Header'
+import { Metadata } from 'next'
 
 import { Sidebar } from './_components/Sidebar'
 
 type DashboardLayoutProps = LayoutProps<'/[locale]'>
 
-export default function FrontendLayout({ children }: DashboardLayoutProps) {
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+  title: {
+    template: '%s | Portfolio Dashboard',
+    default: 'Portfolio Dashboard',
+  },
+  description: 'The dashboard for your personal portfolio.',
+  authors: {
+    name: 'Pavee Udomkarnpaisarn',
+    url: 'https://pavee.dev',
+  },
+}
+
+export default function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
     <div className="flex h-screen">
       <Sidebar />
