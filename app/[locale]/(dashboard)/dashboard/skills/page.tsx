@@ -10,10 +10,7 @@ export const metadata: Metadata = {
 export default function SkillsPage({}: PageProps<'/[locale]/dashboard/skills'>) {
   return (
     <DashboardContainer>
-      <DashboardHeader
-        title="Dashboard"
-        subtitle="Welcome to your dashboard!"
-      />
+      <DashboardHeader title="Skills" subtitle="Your skills" />
       <div>
         <SkillsTable />
       </div>
