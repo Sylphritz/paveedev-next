@@ -1,6 +1,7 @@
 {
   "Dashboard": {
     "title": "Dashboard",
+    "subtitle": "Welcome to your dashboard!",
     "menu": {
       "title": "Admin Dashboard",
       "item": {
@@ -15,6 +16,56 @@
         "item": {
           "posts": "Posts",
           "categories": "Categories"
+        }
+      }
+    },
+    "common": {
+      "pagination": {
+        "prev": "Previous",
+        "next": "Next"
+      }
+    },
+    "content": {
+      "label": {
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "introduction": "Brief introduction"
+      }
+    },
+    "skillsPage": {
+      "title": "Skills",
+      "subtitle": "A list of things you're capable of",
+      "content": {
+        "table": {
+          "header": {
+            "skill": "Skill",
+            "relatedProjects": "Related Projects",
+            "actions": "Actions"
+          },
+          "action": {
+            "view": "View",
+            "edit": "Edit",
+            "delete": "Delete"
+          }
+        }
+      }
+    },
+    "projectsPage": {
+      "title": "Projects",
+      "subtitle": "Your portfolio projects",
+      "content": {
+        "table": {
+          "header": {
+            "image": "Image",
+            "projectName": "Project Name",
+            "actions": "Actions"
+          },
+          "action": {
+            "view": "View",
+            "edit": "Edit",
+            "delete": "Delete"
+          }
         }
       }
     }

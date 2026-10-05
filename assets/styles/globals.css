@@ -64,10 +64,11 @@
 
   --font-sans: var(--font-dm-sans, Arial, Helvetica, sans-serif);
   --font-mono: var(--font-jetbrains-mono, Courier New, Noto Sans Mono, monospace);
+  --font-thai: var(--font-noto-sans-thai, --font-dm-sans, Noto Sans Thai, sans-serif);
 }
 
 @layer base {
-  body {
+  html {
     background: var(--background);
     color: var(--foreground);
     font-family: var(--font-sans), sans-serif;
@@ -76,6 +77,10 @@
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
+
+    &:lang(th) {
+      font-family: var(--font-thai), sans-serif;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {

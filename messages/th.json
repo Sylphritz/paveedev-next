@@ -1,6 +1,7 @@
 {
   "Dashboard": {
     "title": "แดชบอร์ด",
+    "subtitle": "ยินดีต้อนรับสู่แผงควบคุม!",
     "menu": {
       "title": "แผงควบคุม",
       "item": {
@@ -15,6 +16,56 @@
         "item": {
           "posts": "โพสต์",
           "categories": "หมวดหมู่"
+        }
+      }
+    },
+    "content": {
+      "label": {
+        "name": "ชื่อ",
+        "email": "อีเมล",
+        "phone": "เบอร์โทรศัพท์",
+        "introduction": "แนะนำตัวสั้นๆ"
+      }
+    },
+    "common": {
+      "pagination": {
+        "prev": "ก่อนหน้า",
+        "next": "ถัดไป"
+      }
+    },
+    "skillsPage": {
+      "title": "ทักษะ",
+      "subtitle": "ทักษะความสามารถต่างๆของคุณ",
+      "content": {
+        "table": {
+          "header": {
+            "skill": "ทักษะ",
+            "relatedProjects": "โปรเจคที่เกี่ยวข้อง",
+            "actions": "จัดการ"
+          },
+          "action": {
+            "view": "ดู",
+            "edit": "แก้ไข",
+            "delete": "ลบ"
+          }
+        }
+      }
+    },
+    "projectsPage": {
+      "title": "โปรเจค",
+      "subtitle": "ผลงานของคุณ",
+      "content": {
+        "table": {
+          "header": {
+            "image": "รูปภาพ",
+            "projectName": "ชื่อโปรเจค",
+            "actions": "จัดการ"
+          },
+          "action": {
+            "view": "ดู",
+            "edit": "แก้ไข",
+            "delete": "ลบ"
+          }
         }
       }
     }

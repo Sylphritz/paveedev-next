@@ -1,10 +1,13 @@
 import { PaginationItem } from '@/components/Pagination/components/PaginationItem'
 import { Link } from '@/i18n/navigation'
+import { useTranslations } from 'next-intl'
 import { useMemo } from 'react'
 
 import { PaginationProps } from './Pagination.types'
 
 export function Pagination({ totalPages, currentPage }: PaginationProps) {
+  const t = useTranslations('Dashboard.common.pagination')
+
   const pages = useMemo(
     () => [...Array(totalPages).keys()].map((i) => i + 1),
     [totalPages],
@@ -15,10 +18,10 @@ export function Pagination({ totalPages, currentPage }: PaginationProps) {
       <ul className="flex space-x-3 *:*:font-normal text-sm">
         <li>
           {currentPage === 1 ? (
-            <div className="block p-1 text-primary-muted">Previous</div>
+            <div className="block p-1 text-primary-muted">{t('prev')}</div>
           ) : (
             <Link href="?page=1" className="block p-1">
-              Previous
+              {t('prev')}
             </Link>
           )}
         </li>
@@ -55,10 +58,10 @@ export function Pagination({ totalPages, currentPage }: PaginationProps) {
         {/*</li>*/}
         <li>
           {currentPage === totalPages ? (
-            <div className="block p-1 text-primary-muted">Next</div>
+            <div className="block p-1 text-primary-muted">{t('next')}</div>
           ) : (
             <Link href={`?page=${currentPage + 1}`} className="block p-1">
-              Next
+              {t('next')}
             </Link>
           )}
         </li>

@@ -1,32 +1,8 @@
 import { DataTable, DataTableColumn } from '@/components/DataTable'
 import { DataTableRow } from '@/components/DataTable/DataTable.types'
 import { Link } from '@/i18n/navigation'
-
-const columns: DataTableColumn[] = [
-  {
-    name: 'Skill',
-    className: 'text-left',
-  },
-  {
-    name: 'Related Projects',
-    className: 'w-px text-center whitespace-nowrap',
-    format: (value, rowId) => (
-      <div className="flex justify-center">
-        <Link href={`/dashboard/projects?relatedSkill=${rowId}`}>{value}</Link>
-      </div>
-    ),
-  },
-  {
-    name: 'Actions',
-    className: 'w-px text-center whitespace-nowrap',
-    format: (value, rowId) => (
-      <div className="flex justify-center">
-        <Link href={`/dashboard/skills/edit/${rowId}`}>Edit</Link>
-        <Link href={`/dashboard/skills/delete/${rowId}`}>Delete</Link>
-      </div>
-    ),
-  },
-]
+import { useTranslations } from 'next-intl'
+import { useMemo } from 'react'
 
 const mockRows: DataTableRow[] = [
   {
@@ -48,6 +24,46 @@ const mockRows: DataTableRow[] = [
 ]
 
 export function SkillsTable() {
+  const t = useTranslations('Dashboard')
+
+  const columns = useMemo<DataTableColumn[]>(
+    () => [
+      {
+        name: t('skillsPage.content.table.header.skill'),
+        className: 'text-left',
+      },
+      {
+        name: t('skillsPage.content.table.header.relatedProjects'),
+        className: 'w-px text-center whitespace-nowrap',
+        format: (value, rowId) => (
+          <div className="flex justify-center">
+            <Link href={`/dashboard/projects?relatedSkill=${rowId}`}>
+              {value}
+            </Link>
+          </div>
+        ),
+      },
+      {
+        name: t('skillsPage.content.table.header.actions'),
+        className: 'w-px text-center whitespace-nowrap',
+        format: (value, rowId) => (
+          <div className="flex justify-center">
+            <Link href={`/dashboard/skills/${rowId}`}>
+              {t('skillsPage.content.table.action.view')}
+            </Link>
+            <Link href={`/dashboard/skills/edit/${rowId}`}>
+              {t('skillsPage.content.table.action.edit')}
+            </Link>
+            <Link href={`/dashboard/skills/delete/${rowId}`}>
+              {t('skillsPage.content.table.action.delete')}
+            </Link>
+          </div>
+        ),
+      },
+    ],
+    [t],
+  )
+
   return (
     <DataTable
       columns={columns}
