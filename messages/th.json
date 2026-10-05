@@ -31,6 +31,13 @@
       "pagination": {
         "prev": "ก่อนหน้า",
         "next": "ถัดไป"
+      },
+      "table": {
+        "action": {
+          "view": "ดู",
+          "edit": "แก้ไข",
+          "delete": "ลบ"
+        }
       }
     },
     "skillsPage": {
@@ -42,11 +49,6 @@
             "skill": "ทักษะ",
             "relatedProjects": "โปรเจคที่เกี่ยวข้อง",
             "actions": "จัดการ"
-          },
-          "action": {
-            "view": "ดู",
-            "edit": "แก้ไข",
-            "delete": "ลบ"
           }
         }
       }
@@ -60,11 +62,6 @@
             "image": "รูปภาพ",
             "projectName": "ชื่อโปรเจค",
             "actions": "จัดการ"
-          },
-          "action": {
-            "view": "ดู",
-            "edit": "แก้ไข",
-            "delete": "ลบ"
           }
         }
       }

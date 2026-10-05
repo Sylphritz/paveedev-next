@@ -1,5 +1,6 @@
 import { DataTable, DataTableColumn } from '@/components/DataTable'
 import { DataTableRow } from '@/components/DataTable/DataTable.types'
+import { DataTableActions } from '@/components/DataTable/components/DataTableActions'
 import { Link } from '@/i18n/navigation'
 import { useTranslations } from 'next-intl'
 import { useMemo } from 'react'
@@ -37,7 +38,10 @@ export function SkillsTable() {
         className: 'w-px text-center whitespace-nowrap',
         format: (value, rowId) => (
           <div className="flex justify-center">
-            <Link href={`/dashboard/projects?relatedSkill=${rowId}`}>
+            <Link
+              href={`/dashboard/projects?relatedSkill=${rowId}`}
+              className="underline"
+            >
               {value}
             </Link>
           </div>
@@ -47,17 +51,7 @@ export function SkillsTable() {
         name: t('skillsPage.content.table.header.actions'),
         className: 'w-px text-center whitespace-nowrap',
         format: (value, rowId) => (
-          <div className="flex justify-center">
-            <Link href={`/dashboard/skills/${rowId}`}>
-              {t('skillsPage.content.table.action.view')}
-            </Link>
-            <Link href={`/dashboard/skills/edit/${rowId}`}>
-              {t('skillsPage.content.table.action.edit')}
-            </Link>
-            <Link href={`/dashboard/skills/delete/${rowId}`}>
-              {t('skillsPage.content.table.action.delete')}
-            </Link>
-          </div>
+          <DataTableActions pathPrefix="/dashboard/skills" rowId={rowId} />
         ),
       },
     ],

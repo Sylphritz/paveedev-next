@@ -17,7 +17,7 @@ export function Sidebar() {
     <aside className="hidden lg:flex flex-col w-64 p-3">
       <div className="flex flex-col min-h-full bg-linear-to-br from-primary to-primary-dark p-5 gap-4 rounded-2xl shadow-sm shadow-neutral-700">
         <h1 className="text-lg text-on-primary">{t('menu.title')}</h1>
-        <div className="flex-1 flex flex-col overflow-y-auto">
+        <div className="flex-1 flex flex-col">
           <SidebarGroup>
             <SidebarItem
               href="/dashboard"

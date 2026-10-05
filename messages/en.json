@@ -23,6 +23,13 @@
       "pagination": {
         "prev": "Previous",
         "next": "Next"
+      },
+      "table": {
+        "action": {
+          "view": "View",
+          "edit": "Edit",
+          "delete": "Delete"
+        }
       }
     },
     "content": {
@@ -42,11 +49,6 @@
             "skill": "Skill",
             "relatedProjects": "Related Projects",
             "actions": "Actions"
-          },
-          "action": {
-            "view": "View",
-            "edit": "Edit",
-            "delete": "Delete"
           }
         }
       }
@@ -60,11 +62,6 @@
             "image": "Image",
             "projectName": "Project Name",
             "actions": "Actions"
-          },
-          "action": {
-            "view": "View",
-            "edit": "Edit",
-            "delete": "Delete"
           }
         }
       }

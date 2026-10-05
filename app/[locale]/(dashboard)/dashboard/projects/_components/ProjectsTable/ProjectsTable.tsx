@@ -1,6 +1,6 @@
 import { DataTable, DataTableColumn } from '@/components/DataTable'
 import { DataTableRow } from '@/components/DataTable/DataTable.types'
-import { Link } from '@/i18n/navigation'
+import { DataTableActions } from '@/components/DataTable/components/DataTableActions'
 import { useTranslations } from 'next-intl'
 import { useMemo } from 'react'
 
@@ -36,17 +36,7 @@ export function ProjectsTable() {
         name: t('projectsPage.content.table.header.actions'),
         className: 'w-px text-center whitespace-nowrap',
         format: (value, rowId) => (
-          <div className="flex justify-center">
-            <Link href={`/dashboard/projects/${rowId}`}>
-              {t('projectsPage.content.table.action.view')}
-            </Link>
-            <Link href={`/dashboard/projects/edit/${rowId}`}>
-              {t('projectsPage.content.table.action.edit')}
-            </Link>
-            <Link href={`/dashboard/projects/delete/${rowId}`}>
-              {t('projectsPage.content.table.action.delete')}
-            </Link>
-          </div>
+          <DataTableActions pathPrefix="/dashboard/projects" rowId={rowId} />
         ),
       },
     ],

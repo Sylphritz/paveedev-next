@@ -19,7 +19,7 @@ export function SidebarItem({ href, leadingSlot, children }: SidebarItemProps) {
       <Link
         href={href}
         className={cn(
-          'flex gap-3 justify-start items-center font-normal text-on-primary rounded-lg hover:bg-primary-light/50 px-3 py-2 transition-colors duration-200',
+          'flex gap-3 justify-start items-center font-normal text-on-primary rounded-lg hover:bg-primary-light/50 focus-visible:bg-primary-light/50 px-3 py-2 transition-colors duration-200',
           path === href && 'bg-primary-light/50',
         )}
       >
