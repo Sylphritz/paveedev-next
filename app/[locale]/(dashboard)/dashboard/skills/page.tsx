@@ -2,6 +2,7 @@ import { SkillsTable } from '@/app/[locale]/(dashboard)/dashboard/skills/_compon
 import { DashboardContainer } from '@/components/DashboardContainer'
 import { DashboardHeader } from '@/components/DashboardHeader'
 import { Button } from '@/components/ui/Button'
+import AddIcon from '@material-symbols/svg-400/rounded/add-fill.svg'
 import { Metadata } from 'next'
 import { useTranslations } from 'next-intl'
 
@@ -18,7 +19,12 @@ export default function SkillsPage({}: PageProps<'/[locale]/dashboard/skills'>) 
         title={t('title')}
         subtitle={t('subtitle')}
         trailingSlot={
-          <Button href="/dashboard/skills/new">{t('addSkill')}</Button>
+          <Button
+            href="/dashboard/skills/new"
+            leadingSlot={<AddIcon className="h-6 w-6" />}
+          >
+            {t('addSkill')}
+          </Button>
         }
       />
       <div>

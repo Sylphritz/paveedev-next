@@ -1,6 +1,6 @@
 import { Link } from '@/i18n/navigation'
 import { cn } from '@/utils/styles'
-import { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react'
+import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from 'react'
 
 type ButtonColor =
   'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'info'
@@ -12,6 +12,8 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
     color?: ButtonColor
     variant?: ButtonVariant
     href?: string
+    leadingSlot?: ReactNode
+    trailingSlot?: ReactNode
   }
 
 const buttonVariant: Record<ButtonColor, Record<ButtonVariant, string>> = {
@@ -69,10 +71,14 @@ export function Button({
   className,
   children,
   href,
+  leadingSlot,
+  trailingSlot,
   ...props
 }: ButtonProps) {
   const buttonClasses = cn(
-    'px-6 py-2 rounded-2xl shadow-primary active:shadow-none',
+    'px-6 py-2 rounded-2xl shadow-primary active:shadow-none flex items-center gap-2',
+    leadingSlot && 'pl-4',
+    trailingSlot && 'pr-4',
     baseStyles[variant],
     buttonVariant[color][variant],
     className,
@@ -81,7 +87,9 @@ export function Button({
   if (href) {
     return (
       <Link href={href} className={buttonClasses} {...props}>
+        {leadingSlot}
         {children}
+        {trailingSlot}
       </Link>
     )
   }
