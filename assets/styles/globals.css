@@ -26,9 +26,32 @@
 
   /* Generic Status Colors */
   --ui-success: #20974C;
+  --ui-success-light: color-mix(in oklab, var(--ui-success) 80%, white);
+  --ui-success-dark: color-mix(in oklab, var(--ui-success) 90%, black);
+  --ui-success-muted: color-mix(in oklab, var(--ui-success-light) 50%, white);
+  --ui-on-success: #FFFFFF;
+  --ui-on-success-black: #050505;
+
   --ui-warning: #F29E0D;
+  --ui-warning-light: color-mix(in oklab, var(--ui-warning) 80%, white);
+  --ui-warning-dark: color-mix(in oklab, var(--ui-warning) 90%, black);
+  --ui-warning-muted: color-mix(in oklab, var(--ui-warning-light) 50%, white);
+  --ui-on-warning: #FFFFFF;
+  --ui-on-warning-black: #050505;
+
   --ui-error: #FF0B0B;
+  --ui-error-light: color-mix(in oklab, var(--ui-error) 80%, white);
+  --ui-error-dark: color-mix(in oklab, var(--ui-error) 90%, black);
+  --ui-error-muted: color-mix(in oklab, var(--ui-error-light) 50%, white);
+  --ui-on-error: #FFFFFF;
+  --ui-on-error-black: #050505;
+
   --ui-info: #3D84F5;
+  --ui-info-light: color-mix(in oklab, var(--ui-info) 80%, white);
+  --ui-info-dark: color-mix(in oklab, var(--ui-info) 90%, black);
+  --ui-info-muted: color-mix(in oklab, var(--ui-info-light) 50%, white);
+  --ui-on-info: #FFFFFF;
+  --ui-on-info-black: #050505;
 }
 
 /* Dark Mode Colors */
@@ -61,6 +84,34 @@
 
   --color-content: var(--ui-content);
   --color-content-muted: var(--ui-content-muted);
+
+  --color-success: var(--ui-success);
+  --color-success-light: var(--ui-success-light);
+  --color-success-dark: var(--ui-success-dark);
+  --color-success-muted: var(--ui-success-muted);
+  --color-on-success: var(--ui-on-success);
+  --color-on-success-black: var(--ui-on-success-black);
+
+  --color-warning: var(--ui-warning);
+  --color-warning-light: var(--ui-warning-light);
+  --color-warning-dark: var(--ui-warning-dark);
+  --color-warning-muted: var(--ui-warning-muted);
+  --color-on-warning: var(--ui-on-warning);
+  --color-on-warning-black: var(--ui-on-warning-black);
+
+  --color-error: var(--ui-error);
+  --color-error-light: var(--ui-error-light);
+  --color-error-dark: var(--ui-error-dark);
+  --color-error-muted: var(--ui-error-muted);
+  --color-on-error: var(--ui-on-error);
+  --color-on-error-black: var(--ui-on-error-black);
+
+  --color-info: var(--ui-info);
+  --color-info-light: var(--ui-info-light);
+  --color-info-dark: var(--ui-info-dark);
+  --color-info-muted: var(--ui-info-muted);
+  --color-on-info: var(--ui-on-info);
+  --color-on-info-black: var(--ui-on-info-black);
 
   --font-sans: var(--font-dm-sans, Arial, Helvetica, sans-serif);
   --font-mono: var(--font-jetbrains-mono, Courier New, Noto Sans Mono, monospace);

@@ -43,6 +43,7 @@
     "skillsPage": {
       "title": "Skills",
       "subtitle": "A list of things you're capable of",
+      "addSkill": "Add Skill",
       "content": {
         "table": {
           "header": {
@@ -56,6 +57,7 @@
     "projectsPage": {
       "title": "Projects",
       "subtitle": "Your portfolio projects",
+      "addProject": "Add Project",
       "content": {
         "table": {
           "header": {

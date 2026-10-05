@@ -59,6 +59,7 @@ export function SkillsTable() {
   )
 
   return (
+    // TODO: Instead of rows, pass an async function for fetching data based on the current page.
     <DataTable
       columns={columns}
       rows={mockRows}
