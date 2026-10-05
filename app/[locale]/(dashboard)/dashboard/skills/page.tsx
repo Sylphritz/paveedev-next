@@ -15,8 +15,8 @@ export default function SkillsPage({}: PageProps<'/[locale]/dashboard/skills'>) 
   return (
     <DashboardContainer>
       <DashboardHeader
-        title="Skills"
-        subtitle="Your skills"
+        title={t('title')}
+        subtitle={t('subtitle')}
         trailingSlot={
           <Button href="/dashboard/skills/new">{t('addSkill')}</Button>
         }

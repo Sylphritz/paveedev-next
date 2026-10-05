@@ -15,8 +15,8 @@ export default function ProjectsPage({}: PageProps<'/[locale]/dashboard/projects
   return (
     <DashboardContainer>
       <DashboardHeader
-        title="Projects"
-        subtitle="Portfolio projects"
+        title={t('title')}
+        subtitle={t('subtitle')}
         trailingSlot={
           <Button href="/dashboard/projects/new">{t('addProject')}</Button>
         }
