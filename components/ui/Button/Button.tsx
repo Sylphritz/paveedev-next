@@ -73,14 +73,16 @@ export function Button({
   href,
   leadingSlot,
   trailingSlot,
+  disabled,
   ...props
 }: ButtonProps) {
   const buttonClasses = cn(
-    'px-6 py-2 rounded-2xl shadow-primary active:shadow-none flex items-center gap-2',
+    'px-6 py-2 rounded-2xl shadow-primary active:shadow-none flex items-center justify-center gap-2',
     leadingSlot && 'pl-4',
     trailingSlot && 'pr-4',
     baseStyles[variant],
     buttonVariant[color][variant],
+    disabled && 'opacity-50 pointer-events-none shadow-none',
     className,
   )
 

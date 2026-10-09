@@ -134,7 +134,8 @@
     }
   }
 
-  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible,
+  :where(label:has(> *:focus-visible)) {
     @apply outline-2 outline-offset-1 outline-accent-dark;
 
     box-shadow: 0 0 0 4px white;
@@ -166,5 +167,9 @@
     width: 1em;
     height: 1em;
     fill: currentColor;
+  }
+
+  button {
+    cursor: pointer;
   }
 }

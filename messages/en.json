@@ -30,6 +30,12 @@
           "edit": "Edit",
           "delete": "Delete"
         }
+      },
+      "form": {
+        "action": {
+          "save": "Save",
+          "reset": "Reset"
+        }
       }
     },
     "content": {
@@ -51,6 +57,16 @@
             "relatedProjects": "Related Projects",
             "actions": "Actions"
           }
+        }
+      },
+      "addPage": {
+        "title": "Add Skill",
+        "subtitle": "Add a new skill",
+        "form": {
+          "name": "Skill name",
+          "slug": "Slug",
+          "experienceYears": "Years of experience",
+          "enabled": "Enabled"
         }
       }
     },

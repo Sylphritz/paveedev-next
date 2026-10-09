@@ -38,6 +38,12 @@
           "edit": "แก้ไข",
           "delete": "ลบ"
         }
+      },
+      "form": {
+        "action": {
+          "save": "บันทึก",
+          "reset": "ล้าง"
+        }
       }
     },
     "skillsPage": {
@@ -51,6 +57,16 @@
             "relatedProjects": "โปรเจคที่เกี่ยวข้อง",
             "actions": "จัดการ"
           }
+        }
+      },
+      "addPage": {
+        "title": "เพิ่มทักษะ",
+        "subtitle": "เพิ่มทักษะใหม่",
+        "form": {
+          "name": "ชื่อทักษะ",
+          "slug": "Slug",
+          "experienceYears": "ประสบการณ์ (ปี)",
+          "enabled": "เปิดใช้งาน"
         }
       }
     },
